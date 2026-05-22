@@ -1,0 +1,7 @@
+﻿source,url,http_status,title,text_length,launch_date,sold_out_time,units,sales_amount,avg_price,price_range,total_price_range,subscription,location
+新浪财经/乐居财经,https://finance.sina.com.cn/stock/estate/zc/2026-05-10/doc-inhxmeai7686815.shtml,200,90秒售罄！保利海韵开盘“日光”，销售额18亿元|开盘_新浪财经_新浪网,3279,5月10日,90秒,300多套,18亿元,,5.5-6.5万元/㎡,总价区间510-1100万元,,海珠西
+新浪财经/财经网,https://finance.sina.com.cn/roll/2026-05-11/doc-inhxnwmm1954255.shtml,200,广州新政后首个“日光盘”诞生——保利海韵售罄_新浪财经_新浪网,2890,5月10日,两分半钟,300多套,,,5.5万至6.4万元/平方米,总价区间510-1100万元,认筹量就已突破700组,位于海珠区南泰路
+财联社/界面新闻,https://www.cls.cn/detail/2368514,200,广州楼市诞生新政后首个“日光盘”，300套房源两分半钟全部售罄,2480,5月10日,两分半钟,300套,约18亿元,成交均价约5.97万元/平方米,,总价510万元起,认筹超过700组,海珠西
+证券时报/证券日报,https://www.stcn.com/article/detail/3908087.html,200,一线城市新房市场活跃度提升,3507,5月10日,,,,,,,,
+新快报,https://xxsb.gz-cmc.com/pages/2026/05/10/9316ee36c2ab4a1a9648ea36537b43c9.html,200,穗八条后广州首现“日光”盘！保利海韵300余套房两分钟售罄,1183,5月10日,两分钟,300余套,首日认购金额达18亿元,,,,,海珠区南泰路
+东方财富,https://finance.eastmoney.com/a/202605153738077714.html,ERROR,"HTTPSConnectionPool(host='finance.eastmoney.com', port=443): Max retries exceeded with url: /a/202605153738077714.html (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1077)')))",0,,,,,,,,,

@@ -1,0 +1,70 @@
+﻿
+
+
+
+
+
+ 
+ 
+
+<ol class="list_news common" style="min-height: 250px">
+
+</ol>
+<div class="clear_float"></div>
+
+
+
+
+
+
+ 
+ 
+
+<input type="hidden" id="pageNum" name="dwzPage.pageNum" value="1" />
+<input type="hidden" id="numPerPage" name="dwzPage.numPerPage" value="10" />
+<input type="hidden" id="orderField" name="dwzPage.orderField" value="" />
+<input type="hidden" id="orderDirection" name="dwzPage.orderDirection" value="" />
+<input type="hidden" id="parentId" name="parentId" value="" />
+<input type="hidden" id="parentName" name="parentName" value="" />
+<input type="hidden" id="parentType" name="parentType" value="" />
+<!--  
+<div class="page_num"> 共 19 条[首页][上一页]12[下一页][尾页] </div>
+-->
+<div class="page_num mt20">
+	<div>
+	
+    
+     	<span class="disabled">&nbsp;首&nbsp;页&nbsp;</span><span class="disabled">&nbsp;上一页&nbsp;</span>
+    
+    
+	<span>&nbsp;第&nbsp;1&nbsp;页&nbsp;/&nbsp;共&nbsp;1&nbsp;页&nbsp;</span>
+    
+    
+	
+     
+     	<span class="disabled">&nbsp;下一页&nbsp;</span><span class="disabled">&nbsp;末&nbsp;页&nbsp;</span>
+     
+     <span>到第<input id="topages" class="queryArea" type="text" name="dwzPage.currentPage" value="1" style="width: 35px;height: 15px;margin: -5px 4px 0px 4px;text-align: center;">页<input type="button" onclick="document.getElementById('pageNum').value=document.getElementById('topages').value;document.forms['listform'].submit();" value="确定" style="margin: -5px 0px 0px 4px;position: relative;padding: 0 5px;text-align: center;text-decoration: none;font: 12px/18px Arial, sans-serif;display: inline-block;color: #fff;background: #006AC0"></span>
+     </div>
+</div>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".queryArea").each(function() {
+			$(this).keydown(function(e) {
+				var $this = $(this);
+	            var key = (e.keyCode) || (e.which) || (e.charCode);
+	            if (key == "13"){//回车
+	            	$this.next().click();
+	            }
+	        });
+		});
+	})
+</script>	
+
+
+
+
+
+

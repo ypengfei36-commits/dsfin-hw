@@ -1,0 +1,765 @@
+﻿
+
+
+
+
+
+ 
+ 
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+
+
+
+ 
+ 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>广州市房地产中介协会-房地产经纪人之家</title>
+
+<link href="https://www.gzrea.org.cn/website/css/all.css" rel="stylesheet" type="text/css" />
+<link href="https://www.gzrea.org.cn/website/css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://www.gzrea.org.cn/js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+<link id="artDialog-skin" href="https://www.gzrea.org.cn/ocx/artDialog-5.0.3/skins/blue.css" rel="stylesheet" />
+<script type="text/javascript" src="https://www.gzrea.org.cn/ocx/artDialog-5.0.3/source/artDialog.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="https://www.gzrea.org.cn/js/common.js"></script>
+<script type="text/javascript" src="https://www.gzrea.org.cn/js/swfobject.js"></script>
+<script type="text/javascript" src="https://www.gzrea.org.cn/ocx/flexpaper/v140/flexpaperConfigNews.js"></script>
+<script type="text/javascript" src="https://www.gzrea.org.cn/ocx/flexpaper/v140/flexpaper_flash.js"></script>
+<script type="text/javascript" src="https://www.gzrea.org.cn/js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<script type="text/javascript" src="https://www.gzrea.org.cn/js/fancybox/lib/jquery.easing-1.3.pack.js"></script>
+<script type="text/javascript" src="https://www.gzrea.org.cn/js/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="https://www.gzrea.org.cn/js/ziyi/jquery.validate.1.9.0.js"></script>
+<script type="text/javascript" src="https://www.gzrea.org.cn/js/ziyi/common.js"></script>
+<script type="text/javascript" src="https://www.gzrea.org.cn/js/ziyi/ziyi.core.js"></script>
+<script type="text/javascript" src="https://www.gzrea.org.cn/js/ziyi/ziyi.validate.method.js"></script>
+<script type="text/javascript" src="https://www.gzrea.org.cn/js/ziyi/ziyi.regional.zh.js"></script>
+<script type="text/javascript" src="https://www.gzrea.org.cn/js/ziyi/ziyi.function.js"></script>
+<script type="text/javascript" src="https://www.gzrea.org.cn/js/ziyi/ziyi.ui.js"></script>
+<script type="text/javascript" src="https://www.gzrea.org.cn/js/ziyi/ziyi.ajax.js"></script>
+<script type="text/javascript" src="https://www.gzrea.org.cn/js/calendar/WdatePicker.js"></script>
+<script type="text/javascript" src="https://www.gzrea.org.cn/js/md5-min.js"></script>
+<script type="text/javascript" src="https://www.gzrea.org.cn/js/photobox_hyml.js"></script>
+<script>
+/* var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9f7db4480520b23a360faf2fe430c490";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})(); */
+</script>
+</head>
+<body>
+
+
+
+
+
+
+ 
+ 
+
+
+<style type="text/css">
+   .newsWin{right:50%;transform: translate(50%,0%);-webkit-transform: translate(50%,0%);}
+</style>
+
+
+<script type="text/javascript">
+var destiLoc = "";
+$(document).ready(function(){
+	var curLoc = document.location.href;
+	//alert(curLoc);
+	if("http://www.gzrea.org.cn/"==curLoc||"http://www.gzrea.cn/"==curLoc||"http://www.gzrea.org.cn/#"==curLoc||"http://www.gzrea.cn/#"==curLoc) {
+		//openvoteWin();
+	}
+	 if("https://www.gzrea.org.cn/index_cn.jsp"==curLoc||"http://www.gzrea.org.cn/#"==curLoc) {
+		
+		$.ajax({
+			type:'POST',
+			url:'website_news_alertNews.action',
+			dataType:'json',
+			data:{},
+			success:function(json) {
+				if(json!=null&&json!="") {
+					$("#newsTitle").html(json.title);
+					$("#newsTime").html(json.createtime);
+					$("#newsCon").html(json.contents);
+					$("#newsWin").attr("style","display:inline-block;*display:inline;zoom:1; position: absolute; visibility: visible; z-index: 2002;");
+				}
+			}
+		});
+	//}
+	$("input[type=text]").filter("[alt]").inputAlert();
+	$("#password").filter("[alt]").inputAlert();
+	$("input[type=text]").addClass("input_text").focusClass("input_text_on");
+	$("#password").addClass("input_text").focusClass("input_text_on");
+	 $(".changeImage").click(function(){
+	 	$("#changeImageId").attr("src","/center/image.jsp?" + Math.random());
+	 });
+	 $("#submitLogin").click(function(){
+	 	var curUrl = document.location.href;
+	 	if(destiLoc!=null&&destiLoc!="") {
+	 		curUrl = destiLoc;
+	 	}
+	 	$("#loginFrom").attr("action","/center/center_system_login.action?loginType=zlogin");
+	 	$("#curUrl").val(curUrl);
+	 	$("#loginFrom").submit();
+	 });
+	 $("#checknum").keypress(function(e){
+	    if (e.which == 13) {
+	    	var curUrl = document.location.href;
+	    	if(destiLoc!=null&&destiLoc!="") {
+		 		curUrl = destiLoc;
+		 	}
+	 		$("#loginFrom").attr("action","/center/center_system_login.action?loginType=zlogin");
+	 		$("#curUrl").val(curUrl);
+	        $("#loginFrom").submit();
+	    }
+	 });
+	 
+	 $("#c_username").focus();
+});
+
+function login(){
+	$("#logindia").attr("style","left: 486px; top: 150px; position: absolute; visibility: visible; z-index: 2001;");
+}
+function closedia() {
+	$("#logindia").attr("style","left: 486px; top: 150px; position: absolute; visibility: hidden; z-index: 2001;");
+}
+function closevoteWin() {
+	$("#voteWin").attr("style","left: 343px; top: 150px; position: absolute; visibility: hidden; z-index: 2001;");
+}
+function openvoteWin() {
+	$("#voteWin").attr("style","left: 343px; top: 150px; position: absolute; visibility: visible; z-index: 2001;");
+}
+function closenewsWin() {
+	$("#newsWin").attr("style","left: 343px; top: 150px; position: absolute; visibility: hidden; z-index: 2002;");
+}
+function loginToVote() {
+	closevoteWin();
+	var sees = null;
+	if(!sees||sees=="null"||sees=="") {
+		login();
+		destiLoc = "https://www.gzrea.org.cn/center/center_vote_voteRecordList.action";
+	}else {
+		window.location = "https://www.gzrea.org.cn/center/center_vote_voteRecordList.action";
+	}
+}
+$(document).ready(function(){
+	$("#wytsindex").fancybox({
+		'titlePosition'		: 'inside',
+		'transitionIn'		: 'none',
+		'transitionOut'		: 'none'
+	});
+	$("#chkindex").find("input").change(function(){
+	    var xh=$("#chkindex").find("input:checked").size();
+	    if(xh){
+	      $("#btnindex").prop({"disabled":false});
+	    }else{
+	      $("#btnindex").prop({"disabled":"disabled"});
+	 	}
+    });
+    $("#btnindex").click(function(){
+     	//location.href="consumer_wyts_tsForm.action";
+    	$(".fancybox-close").click();
+     	$("#tsForm_ids").submit();
+    })
+});
+</script>
+<style>
+	label.alt {
+		display: block;
+		overflow: hidden;
+		position: absolute;
+		line-height: 20px;
+		float: left;
+		width: 120px;
+		padding: 0 0px;
+		margin: 6px 2px 2px 2px;
+		color:#8B8989;
+		font-size: 12px;
+		font-family: Arial, sans-serif;
+	}
+	
+	.errorMsgBox{
+		float: left;
+		width: 390px;
+		color: #ff4500;
+		background-color: #fff7ee;
+		border: #ff8c00 solid 1px ;
+		text-align: center;
+		line-height: 30px;
+	}
+	.errorMsgBox .error{
+		border: 0px ;
+	}
+	.input_text_on {
+		
+	}
+	
+	#wytsnextsindex{ 
+		display:none;
+	}
+</style><div class="head common" style="width: 977px;">
+	<div class="top_bar">
+     <div style="width: 45%;float: left;">
+	 
+     
+     	欢迎访问广州市房地产中介协会！
+     	<a href="https://www.gzrea.org.cn/center/login.jsp" class="high_light">【会员登录】</a>|<a target="_blank" href="https://www.gzrea.org.cn/center/register.jsp" class="high_light">【注册】</a>
+     	<!-- 
+		<a target="_blank" href="https://www.gzrea.org.cn/center/login.jsp" class="high_light">【会员登录】</a>|<a target="_blank" href="https://www.gzrea.org.cn/center/register.jsp" class="high_light">【注册】</a>
+     	 --> 
+	 
+	 
+     </div>
+     <div style="width: 55%;float: right;text-align: right"><strong style="margin-left: 60px;">服务热线：020-66676400</strong>
+     协会微博：<a href="http://weibo.com/gzrea" target="_blank"><img src="https://www.gzrea.org.cn/website/images/sina_weibo.jpg" width="18" height="18" /></a>
+     <!--<a href="http://t.qq.com/GZ_REA" target="_blank"><img src="https://www.gzrea.org.cn/website/images/qq_weibo.jpg" width="18" height="18" /></a>--> |
+     <a href="https://www.gzrea.org.cn/website/website/contanct/wechat.jsp" target="_blank">协会微信：<img src="https://www.gzrea.org.cn/website/images/weixin.jpg" width="18" height="18" /></a> | 
+     <a href="https://www.gzrea.org.cn/website/website/contanct/lxwm.jsp?id=-101001" target="_blank">联系我们</a></div>
+    </div>
+<a href="https://www.gzrea.org.cn/"><img class="logo" src="https://www.gzrea.org.cn/website/images/logo.png" width="374" height="60" /></a>
+<div class="searh">
+<form method="post" action="https://www.gzrea.org.cn/website/website/website_search_searchList.action">
+<input type="text" name="searchKey" class="text_box5 queryArea" /><input type="submit" value="全站检索" class="btn_search2"  />
+</form>
+</div>	
+   <div class="clear_float"></div>
+    <ul class="nav_main">
+    	<li><a href="https://www.gzrea.org.cn/index_cn.jsp">首页</a></li>
+    	<li class="line"></li>
+    	<li><a href="https://www.gzrea.org.cn/website/website_news_newsList.action?type=some">新闻中心</a></li>
+        <li class="line"></li>
+    	<li><a href="https://www.gzrea.cn/">经纪人之家</a></li>
+        <li class="line"></li>
+    	<li><a href="https://www.gzrea.org.cn/website/stock_sourceinfo_sourceinfoindex.action">存量房网签</a></li>
+        <li class="line"></li>
+    	<li><a href="https://www.gzrea.org.cn/website/consumer_crediteval_creditevalList.action?type=jg">中介信用档案</a></li>
+        <li class="line"></li>
+    	<li><a href="https://www.gzrea.org.cn/website/website_guide_guideList.action?pdid=21">办事指南</a></li>
+        <li class="line"></li>
+        <li><a href="https://www.gzrea.org.cn/website_download_zlFilesList.action">下载中心</a></li>
+        <li class="line"></li>
+        
+        <li><a href="https://www.gzrea.org.cn/website/website_scyj_scyjList.action?pdid=205">市场研究</a></li>
+        <li class="line"></li>
+        <li><a href="https://www.gzrea.org.cn/website/aboutus/aboutus_infoswf_infoswfDetail.action?pdid=56">大事记</a></li>
+        <li class="line"></li>
+        
+    	<li><a href="https://www.gzrea.org.cn/en/index.jsp">English</a></li>
+        <li class="line"></li>
+        <li><a href="http://www.gzrea.org.cn/website_news_newsDetail.action?pdid=11&id=676760369&type=some">交易知识</a></li>
+       
+    </ul>
+</div>
+<form id="tsForm_ids" method="post" action="consumer_wyts_tsForm.action" target="_blank"></form>
+
+<div id="wytsnextsindex" style="width:800px;height:460px;overflow: hidden;">
+	<iframe src="/website/consumer/wyts/hyjf.jsp" style="width:98%;height:400px;"></iframe>
+	<div>
+		<div id="chkindex" style="margin-left:140px;height: 30px;line-height: 30px"><label><input type="checkbox"/>消费者须承诺所反映的内容为事实，若发现存在提供虚假信息或隐瞒交易情况，协会将直接作结案处理</label></div>
+		<div><input id="btnindex" type="button" value="下一步" style="width:100px;height:30px;cursor:pointer;margin-left:350px;" disabled="disabled"/></div>
+	</div>
+</div>
+
+<div id="logindia" style="left: 486px; top: 150px; position: absolute; visibility: hidden; z-index: 2001;" class=""><div class="d-outer   d-state-visible   d-state-focus" role="dialog" tabindex="-1" aria-labelledby="d-title-N3690" aria-describedby="d-content-N3690"><table class="d-border"><tbody><tr><td class="d-nw"></td><td class="d-n"></td><td class="d-ne"></td></tr><tr><td class="d-w"></td><td class="d-c"><div class="d-inner"><table class="d-dialog"><tbody><tr><td class="d-header"><div class="d-titleBar"><div id="d-title-N3690" class="d-title" style="display: block;">登录</div><a class="d-close" href="javascript:closedia();;" style="display: block;">×</a></div></td></tr><tr><td class="d-main" style="width: auto; height: auto;"><div id="d-content-N3690" class="d-content" style="padding: 10px 15px;">
+		<link rel="stylesheet" type="text/css" href="/center/css/reg_login.css">
+		<script type="text/javascript">
+		</script>
+	
+	
+		<div class="nTab_login">
+			
+			<!-- 内容开始 -->
+			<div class="loginTabContent">
+				<form id="loginFrom" name="userform" action="/center/center_system_login.action?loginType=zlogin" method="post" class="required-validate" onsubmit="return validateCallback(this,ajaxDone)">
+					<input type="hidden" name="curUrl" id="curUrl">
+					<input type="hidden" name="backToUrl" value="">
+					<div id="Tab0_Content0">
+						<!--个人用户登录-->
+						<div class="login2_3" style="margin-top: 0px;">
+							<div class="errorMsgBox" style="display: none;text-align: center;color: red"></div>
+							<div class="login2_3_2">
+								<div class="login2_3_2_1">
+									用户类型：
+								</div>
+								<div class="login2_3_2_2">
+									<div style="width: 100px;float: left;line-height: 28px;">
+										<label><input type="radio" style="width: 20px" checked="checked" name="grjg" value="1">个人会员</label>
+									</div>
+									<div style="width: 100px;float: left;line-height: 28px;">
+										<label><input type="radio" style="width: 20px" name="grjg" value="2">企业会员</label>
+									</div>
+								</div>
+							</div>
+							<div class="login2_3_2">
+								<div class="login2_3_2_1">
+									用户名：
+								</div>
+								<div class="login2_3_2_2">
+									<input titlename="用户名" id="username" name="username" class="input_text required" type="text" alt="用户名/执业证号/身份证">
+								</div>
+								<div class="login2_3_2_3">
+									<a href="/zyzh.jsp" target="_blank" class="linkblue02" style="text-decoration: none" tabindex="-1">查询执业证号</a>
+								</div>
+							</div>
+							<div class="login2_3_2">
+								<div class="login2_3_2_1">
+									密码：
+								</div>
+								<div class="login2_3_2_2">
+									<input titlename="密码" id="password" name="password" class="input_text required MD5" type="password" alt="请输入密码">
+								</div>
+								<div class="login2_3_2_3" >
+									<a href="/center/find_pwd.jsp" target="_blank" class="linkblue02" style="text-decoration: none" tabindex="-1">忘记密码？</a>
+								</div>
+							</div>
+							<div class="login2_3_2" style="margin-bottom: 10px;">
+								<div class="login2_3_2_1">
+									验证码：
+								</div>
+								<div class="login2_3_2_4">
+									<input titlename="验证码" name="checknum" class="input_text required" type="text" id="checknum" alt="请输入验证码" maxlength="5">
+								</div>
+								<div class="login2_3_2_3">
+									<img alt="点击获取验证码" src="/center/image.jsp?type=dl" id="changeImageId" class="changeImage" style="width: 80px; height: 30px;" border="1">
+								</div>
+								<div class="login2_3_2_3">
+									<a class="linkbcb changeImage" tabindex="-1">换一张</a>
+								</div>
+							</div>
+							<div class="login2_3_2" style="margin-bottom: 15px;">
+								<div class="login2_3_2_1">
+								</div>
+								<div class="login2_3_2_5" style="padding-left: 90px">
+									<a id="submitLogin" href="#"><img src="/images/login_btn.gif" alt="" width="125" height="38" border="0">
+									</a>
+									<a href="/center/register.jsp" target="_blank" class="linkblue02" style="text-decoration: none;margin-left: 20px;" tabindex="-1">点击注册</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+</div></td></tr><tr><td class="d-footer"><div class="d-buttons" style="display: none;"></div></td></tr></tbody></table></div></td><td class="d-e"></td></tr><tr><td class="d-sw"></td><td class="d-s"></td><td class="d-se"></td></tr></tbody></table></div></div>
+
+
+
+
+
+
+<div id="voteWin" style="left: 343px; top: 150px; position: absolute; visibility: hidden; z-index: 2001;" class="">
+	<div class="d-outer d-state-visible d-state-focus" role="dialog" tabindex="-1" aria-labelledby="d-title-N3690" aria-describedby="d-content-N3690">
+		<table class="d-border">
+		<tbody>
+			<tr>
+				<td class="d-nw"></td>
+				<td class="d-n"></td>
+				<td class="d-ne"></td>
+			</tr>
+			<tr>
+				<td class="d-w"></td>
+				<td class="d-c">
+					<div class="d-inner">
+						<table class="d-dialog">
+						<tbody>
+							<tr>
+								<td class="d-header">
+									<div class="d-titleBar">
+										<div id="d-title-N3690" class="d-title" style="display: block;">投票</div>
+										<a class="d-close" href="javascript:closevoteWin();;" style="display: block;">×</a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="d-main" style="width: auto; height: auto;">
+									<div id="d-content-N3690" class="d-content" style="padding: 10px 15px;">
+									<link rel="stylesheet" type="text/css" href="/center/css/reg_login.css">
+										<div class="nTab_login" style="width: 700px;">
+											<!-- 内容开始 -->
+											<div class="loginTabContent">
+												<!-- 
+												<form id="loginFrom" name="userform" action="/center/center_system_login.action?loginType=zlogin" method="post" class="required-validate" onsubmit="return validateCallback(this,ajaxDone)">
+													<input type="hidden" name="backToUrl" value="">
+													<div id="Tab0_Content0">
+													</div>
+												</form>
+												 -->
+												 <div>
+												 	<h1 style="text-align: center;line-height: 40px">协会第二届会员代表选举正式开始</h1>
+												 	<h2 style="text-align: center;line-height: 30px;">——您的投票，是对行业最大的支持！</h2>
+												 	<ul style="list-style: none;line-height: 25px;">
+												 		<li>亲爱的会员，您好！</li>
+												 		<li style="text-indent: 2em;">广州市房地产中介协会自2010年6月23日成立以来，在广大会员的支持与努力下，协会在会员服务及行业自律管理工作方面均取得良好的成绩，在此感谢广大会员同心协力为协会的持续发展所作出的贡献，协会将继续秉承“服务会员，服务行业，服务社会”的理念,为广大会员提供优质的会员服务。</li>
+												 		<li style="text-indent: 2em;">根据协会章程规定，协会在2014年将进行换届，现根据此前制定的换届选举程序，定于<span style="color: blue">5月5日（8:30）至5月11日（20:30）</span>期间，在全体会员范围内开展协会第二届会员代表选举工作。</li>
+												 		<li style="text-indent: 2em;">请广大会员积极参与投票，认真履行会员权利，选出合格的会员代表。</li>
+												 		<li style="text-indent: 2em;">备注：投票期间，如有疑问，可致电020-66676365进行咨询。</li>
+												 		<li style="text-align: right;">广州市房地产中介协会</li>
+												 	</ul>
+												 	<div>
+												 		<!-- 
+												 		https://www.gzrea.org.cn//center/center_vote_voteRecordList.action
+												 	 	-->
+												 		<h1><a href="javascript:loginToVote();" class="btn_block6" style="width: 100px;text-decoration: none;margin-left: 300px;"><span>开始投票</span></a></h1>
+												 	</div>
+												 </div>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="d-footer">
+									<div class="d-buttons" style="display: block;"></div>
+								</td>
+							</tr>
+						</tbody>
+						</table>
+					</div>
+				</td>
+				<td class="d-e"></td>
+			</tr>
+			<tr>
+				<td class="d-sw"></td>
+				<td class="d-s"></td>
+				<td class="d-se"></td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+</div>
+
+
+</script>
+<div id="newsWin" style="left: 343px; top: 150px; position: absolute; visibility: hidden; z-index: 2002;display:inline-block;*display:inline;zoom:1;width:680px;" class="newsWin" >
+	<div class="d-outer d-state-visible d-state-focus" role="dialog" tabindex="-1" aria-labelledby="d-title-N3690" aria-describedby="d-content-N3690">
+		<table class="d-border">
+		<tbody>
+			<tr>
+				<td class="d-nw"></td>
+				<td class="d-n"></td>
+				<td class="d-ne"></td>
+			</tr>
+			<tr>
+				<td class="d-w"></td>
+				<td class="d-c">
+					<div class="d-inner">
+						<table class="d-dialog">
+						<tbody>
+							<tr>
+								<td class="d-header">
+									<div class="d-titleBar">
+										<div id="d-title-N3690" class="d-title" style="display: block;">通知</div>
+										<a class="d-close" href="javascript:closenewsWin();;" style="display: block;">×</a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="d-main" style="width: auto; height: auto;">
+									<div id="d-content-N3690" class="d-content" style="padding: 10px 15px;">
+									<link rel="stylesheet" type="text/css" href="/center/css/reg_login.css">
+										<div class="nTab_login" style="width: 680px;">
+											<!-- 内容开始 -->
+											<div class="loginTabContent">
+												 <div style="height: 400px;overflow-y: scroll;">
+												 	<h1 style="text-align: center;height: 40px;" id="newsTitle">这里是新闻标题</h1>
+												 	<p style="text-align: center;height: 20px;" id="newsTime"></p>
+												 	<div id="newsCon" style="text-indent: 2em;line-height: 20px;">这里是新闻内容这里是新闻内容这里是新闻内容这里是新闻内容这里是新闻内容这里是新闻内容这里是新闻内容这里是新闻内容这里是新闻内容这里是新闻内容这里是新闻内容这里是新闻内容</div>
+												 </div>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class="d-footer">
+									<div class="d-buttons" style="display: block;"></div>
+								</td>
+							</tr>
+						</tbody>
+						</table>
+					</div>
+				</td>
+				<td class="d-e"></td>
+			</tr>
+			<tr>
+				<td class="d-sw"></td>
+				<td class="d-s"></td>
+				<td class="d-se"></td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
+</div>
+<script type="text/javascript">
+	function logout() {
+		var currentUrl = document.location.href;
+		$("#OutCurrentUrlId").val(currentUrl);
+		$("#logOutForm").submit();		
+	}
+</script>
+
+
+
+
+
+
+
+	
+	
+
+
+<script src="/js/pdfObject/2.2.12/pdfobject.js"></script>
+<style>
+	.pdfobject-container {
+		height: 600px;
+	}
+	.pdfobject {
+		border: 1px solid #ccc;
+	}
+</style>
+<div class="box"> 
+	
+
+
+
+
+
+ 
+ 
+
+
+	<div style="padding: 3px 0"></div>
+      	         
+     <div class="side_left box_nav_side" style="width: 274px;">
+		<div class="nav_side">
+            <div class="block2">
+                <div class="t_l"></div>
+                <div class="t_m"></div>
+                <div class="t_r"></div>
+                <div class="m_l"></div>
+                <div class="m_m">
+   				    <h3 class="title_l5">市场研究</h3>  
+                    <ol class="nav_menu init_menu common">
+                    	<li><a href="/website/website_scyj_scyjList.action?pdid=205" menu="pdid=205">一周独家数据</a></li>
+                    	<li><a href="/website/website_scyj_scyjList.action?pdid=201" menu="pdid=201">住宅二手交易专栏</a></li>
+                    	<li><a href="/website/website_scyj_scyjList.action?pdid=202" menu="pdid=202">住宅租金监测专栏</a></li>
+                    	<li><a href="/website/website_scyj_scyjList.action?pdid=203" menu="pdid=203">经理人指数专栏</a></li>
+                    	<li><a href="/website/website_scyj_scyjList.action?pdid=204" menu="pdid=204">专题研究报告</a></li>
+                       <li><a href="/website/website_scyj_scyjList.action?pdid=206" menu="pdid=206">房地产中介信用白皮书</a></li><!-- -->
+                    </ol>      
+                </div>
+                <div class="m_r"></div>
+                <div class="b_l"></div>
+                <div class="b_m"></div>
+                <div class="b_r"></div>
+            </div>
+        </div>             
+    	
+		
+
+
+
+
+
+ 
+ 
+
+
+	<div class="nav_side">
+       <div class="block2">
+           <div class="t_l"></div>
+           <div class="t_m"></div>
+           <div class="t_r"></div>
+           <div class="m_m" style="height:auto;">
+               <ol>
+               	<li style="height:150px; padding: 0 0 0 28px;font-size:14px;">
+               		<ul>
+               			<li style="float:left; list-style:none; width:100px;">
+               				<p align="center" ><img src="https://www.gzrea.org.cn/website/images/fw.jpg" style="width:91px;height:91px;"/></p>
+               				<p align="center" style="font-size:11px;">协会微信公众号</p>
+               			</li>
+               			<li style="float:left; list-style:none; margin-left:10px; width:120px;">
+                 		<!--<p align="center" ><img src="https://www.gzrea.org.cn/phone/images/gzrea_app_ewm.png" style="width:84px;height:84px;margin:4px;"/></p>
+						<p align="center" ><img src="https://www.gzrea.org.cn/phone/images/gzrea_app_new.JPG" style="width:84px;height:84px;margin:4px;"/></p>
+                 		<p align="center" style="font-size:11px;">广州经纪人(安卓版)</p>-->
+               			</li>
+               		</ul>
+               	</li>
+               	<li style="height:135px;line-height:13px;padding: 0 0 0 28px; font-size:12px;">
+               		>>联系我们<br/>
+					传真：020-83388279<br/>
+					服务热线：020-66676400-分线<br/> 
+					按1：入会咨询 <br/>
+					按2：中介机构及人员业务<br/> 
+					按3：教育培训 <br/>
+					按4：二手房网签相关业务<br/> 
+					按0：查号 <br/>
+					行业纠纷及投诉处理业务：020-66670477  <br/>
+					网签问题咨询邮箱：gzrea_wqyw@126.com  
+				</li>
+               	<li style="height:30px;line-height:30px;padding: 0 0 0 28px;font-size:12px;"><a href="https://www.gzrea.org.cn/website/website/contanct/lxwm.jsp?id=-101001" target="_blank" style="color:#00f;margin-left:188px;">更多</a></li>
+               </ol>      
+           </div>
+           <div class="m_r"></div>
+           <div class="b_l"></div>
+           <div class="b_m"></div>
+           <div class="b_r"></div>
+       </div>
+     </div>
+
+
+    </div><!-- side_left-->
+<script language="javascript" type="text/javascript">
+$(document).ready(function (){
+	var href = document.location.href;
+	$(".init_menu a").each(function() {
+		var $this = $(this);
+		//与本页面相同的action 添加selected2
+		if($this.attr("menu") && href.indexOf($this.attr("menu"))>=0){
+			$this.addClass("selected2");
+			return;
+		}
+	});
+});
+</script>
+	    
+    <div class="side_right box_content">
+    	<div class="content">
+      
+            <div class="block2">
+                <div class="t_l"></div>
+                <div class="t_m"></div>
+                <div class="t_r"></div>
+                <div class="m_l"></div>
+                <div class="m_m">
+                		<h3 class="title_r5" style="padding: 10px 22px;height: auto">5月11日-5月17日，每周二手住宅网签数据</h3>  
+	                     <div class="title_info" style="padding: 10px 22px;">
+	                     	发布日期：2026-05-18&nbsp;&nbsp;&nbsp;&nbsp;
+	                     </div>
+	                     <div class="box_text">
+	                     	
+	                     		<b style="font-size: 14px;">概述:</b><br/>
+								<span style="text-indent:26px;display:block"></span>
+								<br/><br/>
+		                     	<b style="font-size: 14px;">内容:</b><br/>
+	                     		<div style="text-align:justify;">
+	<span style="font-family:&quot;font-size:16px;line-height:2;">&nbsp; &nbsp; &nbsp; &nbsp;上周广州市二手住宅网签进一步增长至2407宗，其中番禺区和海珠区的网签超过300宗。</span>
+</div>
+<span style="font-size:16px;font-family:&quot;">
+<div style="text-align:justify;">
+	<span style="line-height:2;">&nbsp; &nbsp; &nbsp; &nbsp;中心六区十大活跃板块网签宗数环比都有增长，黄沙、东晓南等多个板块增长幅度显著。</span>
+</div>
+</span><span style="font-size:16px;font-family:&quot;">
+<div style="text-align:justify;">
+	<span style="line-height:2;">&nbsp; &nbsp; &nbsp; &nbsp;十大活跃楼盘方面，祈福新邨、辉洋苑和广州亚运城网签宗数排名靠前。</span>
+</div>
+</span><span style="font-size:16px;font-family:&quot;">
+<div style="text-align:center;">
+	<span style="line-height:2;">表1 广州市各行政区二手住宅网签情况表&nbsp;</span>
+</div>
+</span>
+<div style="text-align:center;">
+	<img src="https://www.gzrea.org.cn/upload/editor/2026/05/967a4616fa64a3541c6742bc0a8543929b70cc443517a274.png" width="500" height="517" alt="" /><br />
+</div>
+<span style="font-size:16px;font-family:&quot;">
+<p style="text-align:center;">
+	<span style="line-height:2;">表2 广州市中心城区二手住宅十大活跃板块表&nbsp;</span>
+</p>
+<p style="text-align:center;">
+	<span style="line-height:2;"><img src="https://www.gzrea.org.cn/upload/editor/2026/05/967a4616fa64a354350cbe5a383c0daaf3f8afa7bb2eb706.png" width="500" height="259" alt="" /><br />
+</span>
+</p>
+</span><span style="font-size:16px;font-family:&quot;">
+<div style="text-align:center;">
+	<span style="line-height:2;">表3&nbsp; 广州市二手住宅十大活跃楼盘表&nbsp;</span>
+</div>
+</span><span style="font-size:16px;font-family:&quot;">
+<div style="text-align:center;">
+	<span style="line-height:2;"><img src="https://www.gzrea.org.cn/upload/editor/2026/05/967a4616fa64a354133483ef648db8bcd6c87af1b7ea1809.png" width="500" height="357" alt="" /></span>
+</div>
+</span>
+	                     	
+	                     	
+	                     </div>
+	                     <div class="mt20"></div>
+	                    <div class="clear_float"></div>
+               </div>
+                <div class="m_r"></div>
+                <div class="b_l"></div>
+                <div class="b_m"></div>
+                <div class="b_r"></div>
+            </div>
+        </div>  
+    
+    </div><!-- side_right-->	
+    
+   
+</div>
+
+
+
+
+
+
+ 
+ 
+
+<script type="text/javascript">
+
+</script>
+
+<div class="foot">
+    <!-- 
+    <a  href="https://www.gzrea.org.cn/website/website/contanct/lxwm.jsp?id=-101001" target="_blank">联系我们</a> | 
+    <a target="_blank" href="/channel/bzzx/wzdh.jsp">网站地图</a> | 
+    <a  href="https://www.gzrea.org.cn/website_download_zlFilesList.action" target="_blank">下载中心</a> | 
+    <a href="#">版权声明</a> 
+     -->
+    <p>
+    	主办单位：广州市房地产中介协会（服务热线：020-66676400）  
+    	<a href="https://www.gzrea.org.cn/website/website/contanct/lxwm.jsp?id=-101001" target="_blank">[更多联系方式]</a><b style="font-size:13px;"></b>
+    </p>
+	<p>
+		 协会微博：
+	 	<a href="http://weibo.com/gzrea" target="_blank"><img src="https://www.gzrea.org.cn/website/images/sina_weibo.jpg" width="18" height="18" /></a>&nbsp;
+   		<!--<a href="http://t.qq.com/GZ_REA" target="_blank"><img src="https://www.gzrea.org.cn/website/images/qq_weibo.jpg" width="18" height="18" /></a> &nbsp;-->
+     	协会微信：
+   		<a href="https://www.gzrea.org.cn/website/website/contanct/wechat.jsp" target="_blank"><img src="https://www.gzrea.org.cn/website/images/weixin.jpg" width="18" height="18" /></a>  
+	</p>
+	<hr color='#EFEFEF' />
+    <!-- 
+    <p>主办单位：广州市房地产中介协会   备案序号：粤ICP备10207640号 版权所有 Copyright@ 2010-2015 </p>
+    <p>声明：未经书面协议或本协会书面许可，任何单位和个人禁止下载、打印、建立镜像。 </p>
+    <p>技术支持：广州市孜一信息科技有限公司</p> 
+    -->
+    <p>备案序号：<a href="https://beian.miit.gov.cn" target="_blank" style="text-decoration:none">粤ICP备14010123号</a> 版权所有 Copyright@ 2010-2020 </p>
+	<p>声明：未经书面协议或本协会书面许可，任何单位和个人禁止下载、打印、建立镜像。 </p>
+	<p>
+		技术支持：广州市孜一信息科技有限公司
+		<script src="http://s20.cnzz.com/stat.php?id=3553157&web_id=3553157&show=pic1" language="JavaScript"></script>
+	</p> 
+	
+	<p>
+		<div style="width:300px;margin:0 auto; padding:20px 0;">
+<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44010402001380" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="https://www.gzrea.org.cn/website/images/batp.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">粤公网安备 44010402001380号</p></a>
+	</p> 
+	
+</div>
+
+</body>
+</html>
+

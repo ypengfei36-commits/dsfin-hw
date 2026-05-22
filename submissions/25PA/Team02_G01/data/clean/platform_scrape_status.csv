@@ -1,0 +1,6 @@
+﻿platform,url,http_status,title_or_error,html_length,usable_for_auto_parse,note
+链家,https://gz.lianjia.com/ershoufang/haizhu/,200,登录,1119,False,返回登录/验证码/壳页面或连接失败，未继续自动采集
+贝壳,https://gz.ke.com/ershoufang/haizhu/,200,CAPTCHA,6293,False,返回登录/验证码/壳页面或连接失败，未继续自动采集
+58同城,https://gz.58.com/haizhu/ershoufang/,200,,719,False,返回登录/验证码/壳页面或连接失败，未继续自动采集
+安居客,https://guangzhou.anjuke.com/sale/haizhu/,200,,730,False,返回登录/验证码/壳页面或连接失败，未继续自动采集
+房天下,https://gz.esf.fang.com/house-a074/,200,【海珠二手房|广州海珠区二手房出售】 - 广州房天下,199382,True,公开页面可解析

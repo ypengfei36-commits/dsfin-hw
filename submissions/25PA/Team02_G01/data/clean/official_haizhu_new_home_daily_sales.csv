@@ -1,0 +1,4 @@
+﻿metric,district,date,residential_units,residential_area_m2,commercial_units,commercial_area_m2,office_units,office_area_m2,parking_units,parking_area_m2
+saleable,海珠区,2026-05-19,3553,477720.3933,1297,280452.1899,1665,404888.486,17244,475298.1893
+unsold,海珠区,2026-05-19,5470,717275.942,4796,1344941.769,7853,1738849.426,38270,993197.0496
+signed,海珠区,2026-05-19,17,1748.0501,0,0.0,0,0.0,6,78.115
